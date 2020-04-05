@@ -551,7 +551,7 @@ namespace DBus.Protocol
 			return val;
 		}
 
-		public T ReadStruct<T> () where T : struct
+		public T ReadStruct<T> () //where T : struct
 		{
 			ReadPad (8);
 

@@ -437,7 +437,7 @@ namespace DBus.Protocol
 			throw new Exception ("Array length " + ln.ToString () + " exceeds maximum allowed " + ProtocolInformation.MaxArrayLength + " bytes");
 		}
 
-		public void WriteStructure<T> (T value) where T : struct
+		public void WriteStructure<T> (T value) //where T : struct
 		{
 			FieldInfo[] fis = typeof (T).GetFields (BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
